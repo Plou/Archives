@@ -1,0 +1,10 @@
+---
+layout: default
+---
+{% include nav.html %}
+
+{% assign title = page.title %}
+{% assign url = page.url %}
+{% include post.html %}
+
+{% include thumbnails.html current=page.id %}

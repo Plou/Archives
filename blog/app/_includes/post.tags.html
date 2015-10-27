@@ -1,0 +1,3 @@
+{% for tag in post.tags %}
+    <span class="tag {{ tag | replace:' ','-' }}">{{ tag }}</span>
+{% endfor %}

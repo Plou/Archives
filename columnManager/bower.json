@@ -1,0 +1,30 @@
+{
+  "name": "columnManager",
+  "main": "columnManager.js",
+  "version": "1.2.2",
+  "homepage": "https://github.com/Plou/columnManager",
+  "authors": [
+    "Plou <cl.plou@gmail.com> (http://plou.github.io/)"
+  ],
+  "bugs": {
+      "url" : "https://github.com/Plou/columnManager/issues"
+    },
+  "description": "A javaScript library to help you managing a multiple column webApp like layout.",
+  "keywords": [
+    "webApp",
+    "column",
+    "layout"
+  ],
+  "license": "GPL v3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.0"
+  }
+
+}

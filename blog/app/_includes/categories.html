@@ -1,0 +1,3 @@
+{% for category in site.categories %}
+    <a class="category {{ category | first | replace:' ','-' }}"  href="#{{ category | first | replace:' ','-' }}" data-filter="{{ category | first | replace:' ','-' }}"><span>{{ category | first }}</span></a>
+{% endfor %}

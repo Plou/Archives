@@ -1,0 +1,3 @@
+{% for category in post.categories %}
+    <span class="category {{ category | replace:' ','-' }}">{{ category }}</span>
+{% endfor %}

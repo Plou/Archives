@@ -1,0 +1,5 @@
+/* Empty. Add your own CSS if you like */
+.bar-footer-hidden {
+  transition: all .3s .5s;
+  bottom: -44px;
+}

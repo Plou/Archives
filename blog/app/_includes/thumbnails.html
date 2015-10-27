@@ -1,0 +1,28 @@
+<aside id="list" class="posts">
+    <header>
+        <h1>Other posts</h1>
+    </header>
+    <div>
+        <input type="text" id="search" placeholder="Search in title#category:tags@date"/>
+    </div>
+    {% for post in site.posts %}
+        {% if post.id != include.current %}
+            <article class="post {{ post.categories | join:',' | replace: ' ','-' | replace: ' ',','}} {{ post.tags | join:',' | replace: ' ','-' | replace: ',',' '}}" data-tags="{{ post.title | replace: ' ',''}}#{{ post.categories | join:',' | replace: ' ','-' | replace: ' ',''}}:{{ post.tags | join:',' | replace: ' ','-' | replace: ',',''}}@{{ post.date | date: '%Y%m%d' }}">
+        {% else %}
+            <article class="current post {{ post.categories | join:',' | replace: ' ','-' | replace: ' ',','}} {{ post.tags | join:',' | replace: ' ','-' | replace: ',',' '}}" data-tags="{{ post.title | replace: ' ',''}}#{{ post.categories | join:',' | replace: ' ','-' | replace: ' ',''}}:{{ post.tags | join:',' | replace: ' ','-' | replace: ',',''}}@{{ post.date | date: '%Y%m%d' }}">
+        {% endif %}
+                <a class="links" href="{{ post.url }}">
+                    <header>
+                        {% include post.meta.html %}
+                        <h1>{{ post.title }}</h1>
+                    </header>
+                    <div class="content">
+                        <p class="description">{{ post.description }}</p>
+                    </div>
+                    <footer>
+                        <time>{{ post.date | date: '<span class="day">%d</span> <span class="month">%b</span> <span class="year">%Y</span>' }}</time>
+                    </footer>
+                </a>
+            </article>
+    {% endfor %}
+</aside>

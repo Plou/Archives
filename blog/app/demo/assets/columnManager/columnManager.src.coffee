@@ -1,0 +1,1 @@
+../../../_bower_components/columnManager/columnManager.src.coffee

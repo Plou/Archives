@@ -1,0 +1,15 @@
+---
+layout: default
+title: Plou
+description: About building websites
+---
+
+{% include nav.html %}
+
+{% assign post = site.posts.first %}
+{% assign title = site.posts.first.title %}
+{% assign url = site.posts.first.url %}
+{% assign content = post.content %}
+{% include post.html %}
+
+{% include thumbnails.html current=post.id %}

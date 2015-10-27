@@ -1,0 +1,3 @@
+{% for tag in site.tags %}
+    <a class="tag {{ tag | first | replace:' ','-' }}" href="#{{ tag | first | replace:' ','-' }}" data-filter="{{ tag | first | replace:' ','-' }}"><span>{{ tag | first }}</span></a>
+{% endfor %}

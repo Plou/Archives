@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Plou</title>
+        <description>About web design &amp; programing</description>
+        <link>http://plou.github.io</link>
+        <atom:link href="http://plou.github.io/feed.xml" rel="self" type="application/rss+xml" />
+        
+            <item>
+                <title>Yeoman, modern workflow</title>
+                <description>&lt;h1&gt;An auto-replicant presentation&lt;/h1&gt;
+
+&lt;p&gt;This week I had the opportunity to make a presentation about Yeoman and how it will improve our workflow at &lt;a href=&quot;http://www.inouit.fr&quot;&gt;Inouit&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The purpose of this presentation is to introduce tools to improve the development workflow while using them to building slides with yeoman.&lt;/p&gt;
+
+&lt;p&gt;You can read the &lt;a href=&quot;http://plou.github.io/slides/yeoman-modern-workflow/en/&quot;&gt;slides&lt;/a&gt; &lt;a href=&quot;http://plou.github.io/slides/yeoman-modern-workflow/fr/&quot;&gt;FR&lt;/a&gt; and access the &lt;a href=&quot;https://github.com/Plou/Slides/tree/master/yeoman-modern-workflow&quot;&gt;sources&lt;/a&gt;.&lt;/p&gt;
+</description>
+                <pubDate>Sun, 15 Dec 2013 00:00:00 +0100</pubDate>
+                <link>http://plou.github.io/code/2013/12/15/yeoman-modern-worklow/</link>
+                <guid isPermaLink="true">http://plou.github.io/code/2013/12/15/yeoman-modern-worklow/</guid>
+            </item>
+        
+            <item>
+                <title>lost in licences</title>
+                <description>&lt;h1&gt;Anybody&amp;#39;s here ?&lt;/h1&gt;
+
+&lt;p&gt;Anyone making a great thing want to share it with the world, most of them at least.&lt;/p&gt;
+
+&lt;p&gt;The first time you let your creation go outside to meet the world, you may feel uneasy about it. As an overprotective parent, you want it to be safe.&lt;/p&gt;
+
+&lt;p&gt;So you go looking for a licence, either you don&amp;#39;t want your product to be edited/shared freely or you want it as free as possible.&lt;/p&gt;
+
+&lt;p&gt;That’s when I felt lost. Making a choice between all ’open-sources’ licenses out there is not what you call easy... But it could be !&lt;/p&gt;
+
+&lt;p&gt;On &lt;a href=&quot;http://choosealicense.com/&quot;&gt;Choose a licence&lt;/a&gt; you can find sums up of all main licences with a human readable list about what each require, permit and forbid. Then you can go further and read the licence text to check if it’s the one.&lt;/p&gt;
+
+&lt;p&gt;Good luck and enjoy your trip to licensing wonderland!&lt;/p&gt;
+</description>
+                <pubDate>Sat, 30 Nov 2013 00:00:00 +0100</pubDate>
+                <link>http://plou.github.io/default/2013/11/30/lost-in-licences/</link>
+                <guid isPermaLink="true">http://plou.github.io/default/2013/11/30/lost-in-licences/</guid>
+            </item>
+        
+            <item>
+                <title>Column manager</title>
+                <description>&lt;h1&gt;A script to manage a webApp like layout&lt;/h1&gt;
+
+&lt;p&gt;Building this web site I came across the problem of managing columns so the layout don&amp;#39;t break on any device size.
+I first Tried with pure css, using flex display property, I wanted to try it. I made a first version of this website with it, I almost achieved what I wanted but the result wasn&amp;#39;t exactly what I had in mind, I had to put some javascript in it to manage some features and the resulting CSS was far too long and not future friendly at all. If I wanted to change the default size of one column I had to edit at least 5 or 6 lines...&lt;/p&gt;
+
+&lt;p&gt;So I decided to build a script who will manage the columns for me. The purpose was to give it a simple columns &amp;amp; views configuration and let him handle everything.&lt;/p&gt;
+
+&lt;p&gt;The down size was the loss of support on browser with javascript disabled. But with the use of table-cell display I achieved a graceful degradation. Managing my layout with Javascript also widen my browser compatibility.&lt;/p&gt;
+
+&lt;p&gt;Here is how to use it :&lt;/p&gt;
+
+&lt;h2&gt;How to use it&lt;/h2&gt;
+
+&lt;p&gt;Create a bunch of columns with a identifier, min, max and medium sizes.&lt;/p&gt;
+
+&lt;h3&gt;Columns&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;c1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;column-1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;c2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;column-2&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;c3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;column-3&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;c4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;column-4&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;c5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;column-5&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Views&lt;/h3&gt;
+
+&lt;p&gt;Create one or more views with sets of size, if the last size can&amp;#39;t be satisfied the next set will be used.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;vMain&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;view&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;main&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;medium&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;medium&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;medium&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;hide&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;medium&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;medium&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Let it manage the columns&lt;/h3&gt;
+
+&lt;p&gt;At last create the manager with columns and views.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;cManager&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;columnManager&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;cManager&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;vMain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Ask it to change the view&lt;/h3&gt;
+
+&lt;p&gt;Use views to switch displayed columns&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;cManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;vMain&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Tips&lt;/h2&gt;
+
+&lt;p&gt;The default event used to refresh the manager is the resize event on the window, you should use your how resize event to keep your performance high.&lt;/p&gt;
+
+&lt;p&gt;You can use the keyword &amp;quot;hide&amp;quot; instead of a column size to not display the chosen column for the current set of sizes.&lt;/p&gt;
+
+&lt;h2&gt;Demo &amp;amp; Code&lt;/h2&gt;
+
+&lt;p&gt;You can check the light demo &lt;a href=&quot;http://plou.github.io/demo/columnManager/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Please fork or send me requests and help improve it at &lt;a href=&quot;https://github.com/Plou/columnManager&quot;&gt;gitHub&lt;/a&gt;&lt;/p&gt;
+</description>
+                <pubDate>Sun, 20 Oct 2013 00:00:00 +0200</pubDate>
+                <link>http://plou.github.io/code/2013/10/20/column-manager/</link>
+                <guid isPermaLink="true">http://plou.github.io/code/2013/10/20/column-manager/</guid>
+            </item>
+        
+            <item>
+                <title>jFinder</title>
+                <description>&lt;h1&gt;What a fast and &lt;em&gt;sublime&lt;/em&gt; kind of completion&lt;/h1&gt;
+
+&lt;p&gt;When I first discovered &lt;em&gt;Sublime Text&lt;/em&gt;, the thing that astonished me was the way the search works. As you type it gave all results which contain the letters in the same order as the one you typed.&lt;/p&gt;
+
+&lt;p&gt;If you type &lt;strong&gt;how&lt;/strong&gt;, it&amp;#39;ll give you :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;How&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;H&lt;/strong&gt;ell&lt;strong&gt;o&lt;/strong&gt; &lt;strong&gt;w&lt;/strong&gt;ord&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;H&lt;/strong&gt;ey, y&lt;strong&gt;o&lt;/strong&gt;u&amp;#39;re &lt;strong&gt;w&lt;/strong&gt;onderful&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can also filter your search using key caracters :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Default search in the files&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;@&lt;/em&gt; will search in selector or methods in the file&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;:&lt;/em&gt; will send you to a specific line&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Whenever I have to use a search field I think about how it could be nice to have the same feature.&lt;/p&gt;
+
+&lt;p&gt;So I wrote a jQuery plugin to enable it on a list of item.
+Based on a &lt;strong&gt;data-tags&lt;/strong&gt; it reproduce the behavior, parsing the string and activating those fitting. It looks like this :
+    title#category:tags@date&lt;/p&gt;
+
+&lt;p&gt;I use it here so give it a try, to do so press the &amp;quot;s&amp;quot; or &amp;quot;f&amp;quot; key:
+Use &lt;em&gt;#&lt;/em&gt; to look for categories, &lt;em&gt;:&lt;/em&gt; for tags, @ to find a date.&lt;/p&gt;
+
+&lt;h2&gt;To use jFinder on a list :&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;  &lt;span class=&quot;nx&quot;&gt;jQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;jQuery&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;#search&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;finder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;.listItem&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;html example of list and search input :&lt;/h2&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;search&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;list&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;listItem&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-tags=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Symfonyrender#PHP:framework@20120726&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#Symfony&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Symfony render&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;listItem&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-tags=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;borderradius#CSS:Developement&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#border&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;border-radius&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;listItem&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-tags=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;jFinder#javaScript:Developement&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#jFinder&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;jFinder&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;listItem&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-tags=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;mysqlconnect#PHP:Developement&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#mysql&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;mysql connect&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;listItem&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-tags=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;fopen#PHP:Developement&amp;quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#fopen&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;fopen&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Please fork or send me requests and help improve it at &lt;a href=&quot;https://github.com/Plou/jFinder&quot;&gt;gitHub&lt;/a&gt;&lt;/p&gt;
+</description>
+                <pubDate>Sat, 05 Oct 2013 00:00:00 +0200</pubDate>
+                <link>http://plou.github.io/code/2013/10/05/jfinder/</link>
+                <guid isPermaLink="true">http://plou.github.io/code/2013/10/05/jfinder/</guid>
+            </item>
+        
+            <item>
+                <title>Hi there!</title>
+                <description>&lt;h1&gt;Hi there!&lt;/h1&gt;
+
+&lt;p&gt;Since I left school a couple of years ago I try to use what I studied, which is mostly to be &lt;strong&gt;curious&lt;/strong&gt;, every day at work. As a web developer, I&amp;#39;m learning as I work and build stuff.&lt;/p&gt;
+
+&lt;p&gt;It happens fast, our tools improves, workflow evolves and devices used to access &lt;em&gt;websites&lt;/em&gt; changed a &lt;strong&gt;lot&lt;/strong&gt; in the past few years. We&amp;#39;re not even doing only websites anymore (things like webApps came out)!&lt;/p&gt;
+
+&lt;p&gt;To formalize my understanding of web design &amp;amp; development I&amp;#39;ll use this media. Writing about things I learned, how I work and some of the amazing stuff I found out there, will help me to achieve a better understanding.&lt;/p&gt;
+
+&lt;p&gt;Because it is a great place to do so, I&amp;#39;ll use it as a playground to experiment stuff. Kept free from clients constrains I&amp;#39;ll enjoy using new stuff to build it. Sorry if your not using the same browser as me… I&amp;#39;ll work on that soon.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m glad you came by, I hope you&amp;#39;ll find something of any help to you.&lt;/p&gt;
+
+&lt;p&gt;There will be soon some articles about web design, programming and how I learned stuff building this website.&lt;/p&gt;
+
+&lt;p&gt;Meanwhile you should go read them : &lt;strong&gt;Addy Osmani&lt;/strong&gt; &amp;amp; &lt;strong&gt;Brad Frost&lt;/strong&gt; &lt;/p&gt;
+
+&lt;p&gt;See you later,&lt;br /&gt;
+&lt;a href=&quot;https://twitter.com/@devPlou&quot; target=&quot;_blank&quot;&gt;Plou&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;small&gt;I&amp;#39;m french so I&amp;#39;ll try my most beautiful English.&lt;/small&gt;&lt;/em&gt; &lt;/p&gt;
+</description>
+                <pubDate>Sun, 01 Sep 2013 00:00:00 +0200</pubDate>
+                <link>http://plou.github.io/default/2013/09/01/hi-there/</link>
+                <guid isPermaLink="true">http://plou.github.io/default/2013/09/01/hi-there/</guid>
+            </item>
+        
+    </channel>
+</rss>

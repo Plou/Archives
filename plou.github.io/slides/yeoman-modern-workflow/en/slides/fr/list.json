@@ -1,0 +1,39 @@
+[
+    [
+        "index.md",
+        "installation.md",
+        "paquets-requis.md"
+    ],
+    [
+        "a-workflow-story.md",
+        "help.md",
+        "que-faire.md"
+    ],
+    [
+        "yeoman-enchante.md",
+        "yo-grunt-bower.md"
+    ],
+    [
+        "yo.md",
+        "scaffolding-tool.md",
+        "yo-generator-.md"
+    ],
+    [
+        "grunt.md",
+        "build.md",
+        "watch.md"
+    ],
+    [
+        "bower.md"
+    ],
+    [
+        "so.md",
+        {
+            "filename": "hooray.md",
+            "attr": {
+                "data-background": "http://mycdn1.theshirtlist.com/wp-content/uploads/2012/08/Hooray.jpg",
+                "data-background-size": "100% auto"
+            }
+        }
+    ]
+]
